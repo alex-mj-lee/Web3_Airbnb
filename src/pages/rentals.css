@@ -1,0 +1,250 @@
+.topBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 30px 10px;
+  margin: 35px auto;
+}
+.rental_logo {
+  width: 150px;
+}
+
+.searchReminder {
+  width: 400px;
+  border: 1.5px solid rgb(242, 242, 242);
+  border-radius: 100px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.lrContainer {
+  width: 300px;
+  justify-content: end;
+  display: flex;
+  align-items: center;
+}
+
+.filter {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.searchFiltersIcon {
+  background-color: #eb4e5f;
+  padding: 7px;
+  border-radius: 50%;
+}
+
+.line {
+  border-top: 1px solid rgb(230, 229, 229);
+  margin-bottom: 0px;
+}
+
+/* .line2 {
+  border-top: 0.5px solid rgb(230, 230, 230);
+  margin: 30px 0px;
+} */
+
+.rentalsContent {
+  /* border: 4px solid red; */
+  border-radius: 30px;
+  display: flex;
+  justify-content: start;
+  height: calc(100vh - 135px);
+}
+
+.rentalsContentL {
+  max-width: 800px;
+  padding: 30px;
+  height: calc(100vh - 150px);
+  overflow: scroll;
+}
+
+.rentalsContentR {
+  width: 80%;
+}
+
+.rentalsGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  column-gap: 30px;
+  row-gap: 60px;
+  margin-top: 20px;
+}
+.rentalDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.075);
+  transition: all 0.4s;
+}
+.rentalDiv:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.06);
+}
+
+.rentalDivH {
+  animation: mymove 3s;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.075);
+  transition: all 0.4s;
+}
+.rentalDivH:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.06);
+}
+
+@keyframes mymove {
+  from {
+    background-color: #dddddd;
+  }
+  to {
+    background-color: #dddddd00;
+  }
+}
+.rentalImg {
+  aspect-ratio: 1/1;
+  width: 95%;
+  border-radius: 20px;
+}
+
+.rentalInfo {
+  padding: 10px;
+  width: 100%;
+}
+
+.rentalTitle {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.rentalDesc {
+  color: gray;
+}
+
+.bottomButton {
+  margin-top: 10px;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.price {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  color: #808080;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1200px) {
+  .rentalsContentR {
+    display: none;
+  }
+  .rentalsContentL {
+    padding: 10px auto;
+  }
+  .rentalsContent {
+    justify-content: center;
+  }
+  .searchReminder {
+    display: none;
+  }
+  .topBanner {
+    max-width: 960px;
+    padding: 30px 20px;
+  }
+  .menu_btns {
+    display: inline-block;
+    background: #fff;
+    margin-bottom: 14px;
+    margin-left: 10px;
+  }
+  .hamburgers {
+    cursor: position;
+    width: 24px;
+    height: 15px;
+    transition: all 0.25s;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  .hamburgers-top,
+  .hamburgers-middle,
+  .hamburgers-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+
+  .hamburgers-middle {
+    transform: translateY(7px);
+  }
+  .hamburgers-bottom {
+    transform: translateY(14px);
+  }
+  .open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+  }
+
+  .open .hamburgers-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+  .open .hamburgers-middle {
+    display: none;
+  }
+  .open .hamburgers-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  }
+}
+@media screen and (max-width: 923px) {
+  .rentalsContentL {
+    padding: 40px;
+    height: 70vh;
+  }
+  .rental_logo {
+    width: 120px;
+  }
+  .topBanner {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .rentalsGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 60px;
+    margin-top: 25px;
+  }
+  .topBanner {
+    padding: 15px 10px 15px 5px;
+  }
+  .hidden__btn {
+    display: none;
+  }
+
+  .rentalsContentL {
+    padding: 20px 15px;
+    margin-top: 20px;
+  }
+}

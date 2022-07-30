@@ -1,0 +1,39 @@
+.user_container > div {
+  width: 1000px;
+  height: 350px;
+  margin-top: 290px;
+}
+
+.stay_lists_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .user_container > div {
+    width: 600px;
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 923px) {
+  .user_container > div {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .user_container > div {
+    width: 400px;
+    margin-top: 150px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .user_container > div {
+    max-width: 350px;
+    padding-bottom: 50px;
+  }
+}

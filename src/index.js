@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./index.css";
+import { BrowserRouter } from "react-router-dom";
+import { MoralisProvider } from "react-moralis";
+import { NotificationProvider } from "web3uikit";
+import { AirbnbProvider } from "./context/AirbnbContext";
+import { NftProvider } from "./context/NftContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDOM.render(
+  <MoralisProvider
+    serverUrl="https://y5g6dnyz4idq.usemoralis.com:2053/server"
+    appId="Bw4cHZT0COxQE2J4Ro5EBLYMFcPd4LNlMO8xyVTt"
+  >
+    <NotificationProvider>
+      <BrowserRouter>
+        <NftProvider>
+          <AirbnbProvider>
+            <App />
+          </AirbnbProvider>
+        </NftProvider>
+      </BrowserRouter>
+    </NotificationProvider>
+  </MoralisProvider>,
+  document.querySelector("#root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

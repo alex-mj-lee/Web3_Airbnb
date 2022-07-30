@@ -1,0 +1,99 @@
+.line {
+  border-top: 1px solid rgb(230, 229, 229);
+  margin-bottom: 0px;
+}
+.support_container {
+  max-width: 1500px;
+}
+
+.support_title {
+  text-align: center;
+  margin-top: 80px;
+}
+.review_link {
+  text-decoration: none;
+  color: rgb(54, 107, 224);
+  font-weight: 100;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.review_link:hover {
+  color: rgb(0, 81, 255);
+}
+
+.input_container {
+  width: 80%;
+  height: 50vh;
+  border: 1px solid rgb(230, 229, 229);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.075);
+  border-radius: 20px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 70px;
+  align-items: center;
+}
+.title_input {
+  width: 70%;
+  font-size: 30px;
+  border: 1px solid rgb(165, 165, 165);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.035);
+
+  padding: 10px 0 10px 30px;
+  border-radius: 10px;
+}
+.input_options {
+  width: 70%;
+  height: 50px;
+  border: 1px solid rgb(165, 165, 165);
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.035);
+  padding: 10px 0 10px 30px;
+}
+.text_input {
+  width: 70%;
+  padding: 10px 0 10px 30px;
+  height: 300px;
+  font-size: 20px;
+  border: 1px solid rgb(165, 165, 165);
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.035);
+}
+.writeSubmit {
+  color: white;
+  background-color: teal;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 61%;
+  margin-bottom: 25px;
+  margin-top: -20px;
+}
+
+@media screen and (max-width: 650px) {
+  .support_title {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .input_container {
+    width: 95%;
+    height: 55vh;
+    margin: 40px auto;
+    gap: 25px;
+    padding-top: 35px;
+  }
+  .writeSubmit {
+    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-left: 46%;
+  }
+  .support_title {
+    margin-top: 40px;
+  }
+}

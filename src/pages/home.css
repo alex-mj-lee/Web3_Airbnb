@@ -1,0 +1,193 @@
+/* =================== */
+.tabContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.home_container {
+  max-width: 1500px;
+}
+.searchFields {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+  justify-content: space-evenly;
+  border-radius: 100px;
+  align-items: center;
+  border: solid 1px black;
+  height: 100px;
+}
+
+.inputs {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0 0 0;
+  width: 160px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.inputs p {
+  padding-left: 14px;
+  padding-top: 1px;
+}
+.input_title {
+  margin-top: 1px;
+  padding-bottom: 7px;
+}
+
+#select-id {
+  width: 135% !important;
+}
+#select-id > div {
+  border: none;
+  width: 85% !important;
+}
+#datePicker__id > div {
+  outline: none;
+  width: 40%;
+}
+#number__input > div {
+  outline: none;
+  width: 40% !important;
+  /* background: red; */
+}
+.vl {
+  position: relative;
+  top: 15;
+  height: 60%;
+  background-color: rgb(228, 228, 228);
+  width: 1.5px;
+  margin-right: 20px;
+  padding-bottom: 15px;
+}
+
+.searchButton {
+  background-color: #eb4e5f;
+  padding: 12px;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+.searchButton:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+/* .moreOptions {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+} */
+
+.randomLocation {
+  /* width: 40%; */
+  width: 400px;
+  padding-left: 60px;
+  padding-top: 13vh;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 30px;
+  width: 300px;
+}
+.text {
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+.text_add {
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.add_form {
+  width: 40%;
+  margin-top: 80px;
+  overflow: scroll;
+}
+
+.menu_btn {
+  display: block;
+  display: none;
+  outline: none;
+}
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .inputs {
+    width: 117px;
+    margin-left: 5px;
+  }
+
+  .input_title {
+    padding-left: 10px;
+  }
+  .vl {
+    margin-right: 0px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 923px) {
+  .searchFields {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 210px;
+    border-radius: 50px;
+    width: 90%;
+    justify-items: end;
+    position: relative;
+  }
+  .randomLocation {
+    padding-top: 6vh;
+    width: 400px;
+  }
+  .inputs {
+    width: 220px;
+    justify-self: center;
+  }
+  .vl {
+    display: none;
+  }
+  .searchFields a {
+    width: 50px;
+    grid-column: 2;
+    position: absolute;
+    bottom: 14px;
+    right: 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+  .inputs {
+    width: 150px;
+  }
+  .searchFields a {
+    right: 20px;
+  }
+  .randomLocation {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .searchFields {
+    width: 100%;
+    padding-right: 2px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .randomLocation {
+    width: 80%;
+    padding: 20px 0px 20px 0px;
+
+    margin: 0 auto;
+  }
+}

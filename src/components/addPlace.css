@@ -1,0 +1,38 @@
+.add_modal > div {
+  max-width: 700px;
+  height: 57%;
+}
+.add_title {
+  display: flex;
+  gap: 25;
+  padding-left: 30px;
+}
+.add_inputs {
+  padding: 30px 30px 50px 30px;
+}
+@media screen and (max-width: 923px) {
+  .add_modal > div {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .add_modal > div {
+    width: 90%;
+    height: 60%;
+  }
+  .add_inputs {
+    padding: 10px 10px 30px 10px;
+  }
+}
+@media screen and (max-width: 449px) {
+  .add_modal > div {
+    width: 90%;
+    height: 58%;
+  }
+  .add_inputs {
+    padding: 0;
+  }
+  .add_title {
+    padding-left: 10px;
+  }
+}
