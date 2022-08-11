@@ -19,6 +19,9 @@ const Support = () => {
     setUpdateReivew,
   } = useContext(nftContext);
 
+  console.log(bookedList);
+  console.log(imgUrl);
+
   return (
     <div className="container support_container">
       <Headers />
@@ -59,11 +62,7 @@ const Support = () => {
             value={reviewStory}
             onChange={(e) => setReviewStory(e.target.value)}
           />
-          <button
-            className="writeSubmit"
-            type="submit"
-            // onClick={() => setUpdateReivew(!updateReview)}
-          >
+          <button className="writeSubmit" type="submit">
             Publish
           </button>
         </form>

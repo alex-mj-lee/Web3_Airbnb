@@ -10,9 +10,11 @@ import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+var console = require("console-browserify");
 
 const Experiences = () => {
   const { reviewList } = useContext(nftContext);
+  console.log(reviewList);
   return (
     <div className="container review_container">
       <Headers />
