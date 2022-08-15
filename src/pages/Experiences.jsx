@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import "./experiences.css";
 import Headers from "../components/Headers";
-import audi from "../images/audi.jpg";
 import { Link } from "react-router-dom";
 import { MdOutlineReviews } from "react-icons/md";
 import { nftContext } from "../context/NftContext";
