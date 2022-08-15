@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+// import { Map, Marker, GoogleApiWrapper } from "@googlemaps/react-wrapper";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
-function RentalsMap({ locations, google, setHighLight }) {
+export default function RentalsMap({ locations, google, setHighLight }) {
   const [center, setCenter] = useState();
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: "AIzaSyCwDPUDZlx1yo9lsVRHAv5bSRhhMh7t4nk",
+  });
   useEffect(() => {
     var arr = Object.keys(locations);
     var getLat = (key) => locations[key]["lat"];
@@ -16,27 +20,66 @@ function RentalsMap({ locations, google, setHighLight }) {
 
   return (
     <div className="container">
-      {center && (
-        <Map
+      {isLoaded ? (
+        <GoogleMap
           google={google}
-          containerStyle={{
+          // containerStyle={{
+          //   width: "50%",
+          //   height: "calc(99vh - 135px)",
+          // }}
+          mapContainerClassName={{
             width: "50%",
             height: "calc(99vh - 135px)",
           }}
-          center={center}
+          position={center}
           initialCenter={locations[0]}
           zoom={13}
-          disableDefaultUI={true}
+          // disableDefaultUI={true}
         >
           {locations.map((coords, i) => (
             <Marker key={i} position={coords} onClick={() => setHighLight(i)} />
           ))}
-        </Map>
+        </GoogleMap>
+      ) : (
+        <>Nothing Load</>
       )}
+      {/* {isLoaded ? (
+        <Map
+          center={center}
+          locations={locations}
+          setHighLight={setHighLight}
+          google={google}
+        />
+      ) : (
+        <></>
+      )} */}
     </div>
   );
 }
 
-export default GoogleApiWrapper({
-  apiKey: "AIzaSyCwDPUDZlx1yo9lsVRHAv5bSRhhMh7t4nk",
-})(RentalsMap);
+// function Map({ center, locations, setHighLight, google }) {
+//   return (
+//     <div>
+//       {center && (
+//         <GoogleMap
+//           google={google}
+//           containerStyle={{
+//             width: "50%",
+//             height: "calc(99vh - 135px)",
+//           }}
+//           center={center}
+//           initialCenter={locations[0]}
+//           zoom={13}
+//           disableDefaultUI={true}
+//         >
+//           {locations.map((coords, i) => (
+//             <Marker key={i} position={coords} onClick={() => setHighLight(i)} />
+//           ))}
+//         </GoogleMap>
+//       )}
+//     </div>
+//   );
+// }
+// export default GoogleApiWrapper({
+//   apiKey: "AIzaSyCwDPUDZlx1yo9lsVRHAv5bSRhhMh7t4nk",
+// })(RentalsMap);
