@@ -9,8 +9,8 @@ import { NftProvider } from "./context/NftContext";
 
 ReactDOM.render(
   <MoralisProvider
-    serverUrl="https://y5g6dnyz4idq.usemoralis.com:2053/server"
-    appId="Bw4cHZT0COxQE2J4Ro5EBLYMFcPd4LNlMO8xyVTt"
+    serverUrl={process.env.REACT_APP_MORALIS_URL}
+    appId={process.env.REACT_APP_MORALIS_ID}
   >
     <NotificationProvider>
       <BrowserRouter>

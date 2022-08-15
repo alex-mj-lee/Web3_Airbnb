@@ -90,7 +90,10 @@ export const AirbnbProvider = ({ children }) => {
 
           let cords = [];
           result.forEach((e) => {
-            cords.push({ lat: e.attributes.lat, lng: e.attributes.long });
+            cords.push({
+              lat: Number(e.attributes.lat),
+              lng: Number(e.attributes.long),
+            });
           });
 
           setCoOrdinates(cords);

@@ -109,43 +109,41 @@ const Rentals = () => {
             {rentalsList &&
               rentalsList.map((e, i) => {
                 return (
-                  <>
-                    {/* <hr className="line2" /> */}
-                    <div
-                      className={highLight === i ? "rentalDivH " : "rentalDiv"}
-                    >
-                      <img className="rentalImg" src={e.attributes.imgUrl} />
-                      <div className="rentalInfo">
-                        <div className="rentalTitle">{e.attributes.name}</div>
-                        <div className="rentalDesc">
-                          {e.attributes.unoDescription}
+                  <div
+                    key={i}
+                    className={highLight === i ? "rentalDivH " : "rentalDiv"}
+                  >
+                    <img className="rentalImg" src={e.attributes.imgUrl} />
+                    <div className="rentalInfo">
+                      <div className="rentalTitle">{e.attributes.name}</div>
+                      <div className="rentalDesc">
+                        {e.attributes.unoDescription}
+                      </div>
+                      <div className="rentalDesc">
+                        {e.attributes.dosDescription}
+                      </div>
+                      <div className="bottomButton">
+                        <div className="price">
+                          <Icon fill="#808080" size={10} svg="matic" />{" "}
+                          {e.attributes.pricePerDay} / Day
                         </div>
-                        <div className="rentalDesc">
-                          {e.attributes.dosDescription}
-                        </div>
-                        <div className="bottomButton">
-                          <div className="price">
-                            <Icon fill="#808080" size={10} svg="matic" />{" "}
-                            {e.attributes.pricePerDay} / Day
-                          </div>
-                          <Button
-                            onClick={() => {
-                              bookRental(
-                                checkIn,
-                                checkOut,
-                                e.attributes.uid_decimal.value.$numberDecimal,
-                                Number(
-                                  e.attributes.pricePerDay_decimal.value
-                                    .$numberDecimal
-                                )
-                              );
-                            }}
-                            text="Stay Here"
-                          />
-                        </div>
+                        <Button
+                          onClick={() => {
+                            bookRental(
+                              checkIn,
+                              checkOut,
+                              e.attributes.uid_decimal.value.$numberDecimal,
+                              Number(
+                                e.attributes.pricePerDay_decimal.value
+                                  .$numberDecimal
+                              )
+                            );
+                          }}
+                          text="Stay Here"
+                        />
                       </div>
                     </div>
-                  </>
+                  </div>
                 );
               })}
           </div>

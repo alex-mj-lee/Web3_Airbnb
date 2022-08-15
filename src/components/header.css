@@ -72,8 +72,7 @@
     display: none;
   }
   .topBanners {
-    width: 90%;
-    margin-left: 40px;
+    width: 100%;
   }
   .logo {
     width: 120px;
@@ -82,11 +81,10 @@
   .menu_btn {
     display: inline-block;
     background: #fff;
-    margin-bottom: 7px;
+    margin-bottom: 8px;
   }
   .hamburger {
     cursor: position;
-    width: 24px;
     height: 19px;
     transition: all 0.25s;
     position: relative;
@@ -131,12 +129,14 @@
 @media screen and (max-width: 650px) {
   .topBanners {
     width: 100%;
-    margin-left: 5px;
     padding-right: 10px;
   }
 
   .hamburger {
     margin: 0 30px 0 0px;
+  }
+  .menu_btn {
+    margin-bottom: 8px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -151,7 +151,10 @@
   }
   .topBanners {
     width: 90%;
-    margin-left: 45px;
+    padding-right: 0;
+  }
+  .menu_btn {
+    margin-bottom: 7px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -159,9 +162,11 @@
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-left: 20px;
   }
   .menu__bar {
     top: 128px;
+  }
+  .menu_btn {
+    margin-bottom: 7px;
   }
 }
