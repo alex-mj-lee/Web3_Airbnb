@@ -3,24 +3,17 @@ import "./support.css";
 import Headers from "../components/Headers";
 import { Link } from "react-router-dom";
 import { nftContext } from "../context/NftContext";
-var console = require("console-browserify");
 
 const Support = () => {
   const {
     bookedList,
-    imgUrl,
     setImgUrl,
     setReviewTitle,
     setReviewStory,
     reviewSubmit,
     reviewTitle,
     reviewStory,
-    updateReview,
-    setUpdateReivew,
   } = useContext(nftContext);
-
-  console.log(bookedList);
-  console.log(imgUrl);
 
   return (
     <div className="container support_container">
